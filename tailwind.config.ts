@@ -11,6 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        black: {
+					"100": "#333333",
+					"200": "#141413",
+					"300": "#7D8087",
+					DEFAULT: "#000000",
+				},
+        Nav : "#070F23",
+        NavText: "#F69C9C"
       },
     },
   },
