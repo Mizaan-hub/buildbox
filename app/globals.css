@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #0F1420;
+  --foreground: #fff;
+}
+
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;

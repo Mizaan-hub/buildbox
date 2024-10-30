@@ -18,7 +18,7 @@ const config: Config = {
       colors: {
         Nav: "#070F23",
         NavText: "#F69C9C",
-        Background: "#041236",
+        Background: "#0F1420",
         primary: {
           "1": "#FFE8F0",
           DEFAULT: "#EE2B69",

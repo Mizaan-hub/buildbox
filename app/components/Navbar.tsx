@@ -29,13 +29,13 @@ const Navbar = async () => {
                 }}
               >
                 <button type="submit">
-                  <span className="max-sm:hidden">Logout</span>
+                  <span className="max-sm:hidden text-white">Logout</span>
                   {/* <LogOut className="size-6 sm:hidden text-red-500" /> */}
                 </button>
               </form>
 
             <Link href={`/user/${session?.id}`}>
-              <span>{session?.user?.name}</span>
+              <span className="text-white">{session?.user?.name}</span>
             </Link>
             </>
           ):(
@@ -45,7 +45,7 @@ const Navbar = async () => {
                 await signIn("github");
               }}
             >
-              <button type="submit">Login</button>
+              <button type="submit" className="text-white">Login</button>
             </form>
           )}
         </div>
