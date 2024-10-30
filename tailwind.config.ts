@@ -18,19 +18,20 @@ const config: Config = {
       colors: {
         Nav: "#070F23",
         NavText: "#F69C9C",
+        Background: "#041236",
         primary: {
-          "100": "#FFE8F0",
+          "1": "#FFE8F0",
           DEFAULT: "#EE2B69",
         },
         secondary: "#FBE843",
         black: {
-          "100": "#333333",
-          "200": "#141413",
-          "300": "#7D8087",
+          "1": "#333333",
+          "2": "#141413",
+          "3": "#7D8087",
           DEFAULT: "#000000",
         },
         white: {
-          "100": "#F7F7F7",
+          "1": "#F7F7F7",
           DEFAULT: "#FFFFFF",
         },
       },
@@ -43,9 +44,9 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        100: "2px 2px 0px 0px rgb(0, 0, 0)",
-        200: "2px 2px 0px 2px rgb(0, 0, 0)",
-        300: "2px 2px 0px 2px rgb(238, 43, 105)",
+        1: "2px 2px 0px 0px rgb(0, 0, 0)",
+        2: "2px 2px 0px 2px rgb(0, 0, 0)",
+        3: "2px 2px 0px 2px rgb(238, 43, 105)",
       },
     },
   },
