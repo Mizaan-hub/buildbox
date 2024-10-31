@@ -1,5 +1,7 @@
 import StartupCard from "@/components/StartupCard";
 import SearchForm from "../../components/SearchForm";
+import { client } from "@/sanity/lib/client";
+import { STARTUPS_QUERY } from "@/sanity/lib/queries";
 
 export default async function Home({
   searchParams,
@@ -8,22 +10,27 @@ export default async function Home({
 }) {
   // params query
   const query = (await searchParams).query;
-  const posts = [
-    {
-      _createdAt: new Date(),
-      views: 55,
-      author: {
-        _id: 1,
-        name: "Mia Malkova",
-        avatar: "/Mia_Malkova.jpg", //"/public/Mia_Malkova.jpg"
-      },
-      _id: 1,
-      description: "Life of Adult Star",
-      image:"/02.jpg", //"/public/02.jpg"
-      category: "Beauty",
-      title: "Fashion"
-    },
-  ];
+
+  const posts = await client.fetch(STARTUPS_QUERY)
+
+  console.log(JSON.stringify(posts, null, 2))
+
+  // const posts = [
+  //   {
+  //     _createdAt: new Date(),
+  //     views: 55,
+  //     author: {
+  //       _id: 1,
+  //       name: "Mia Malkova",
+  //       avatar: "/Mia_Malkova.jpg", //"/public/Mia_Malkova.jpg"
+  //     },
+  //     _id: 1,
+  //     description: "Life of Adult Star",
+  //     image:"/02.jpg", //"/public/02.jpg"
+  //     category: "Beauty",
+  //     title: "Fashion"
+  //   },
+  // ];
 
   return (
     <>

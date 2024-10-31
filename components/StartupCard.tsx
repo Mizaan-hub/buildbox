@@ -12,7 +12,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
     author: {
       _id: authorId,
       name,
-      avatar,
+      image: avatar,
     },
     title,
     image,
