@@ -47,6 +47,7 @@ const config: Config = {
         1: "2px 2px 0px 0px rgb(0, 0, 0)",
         2: "2px 2px 0px 2px rgb(0, 0, 0)",
         3: "2px 2px 0px 2px rgb(238, 43, 105)",
+        4: "2px 2px 0px 2px #F69C9C",
       },
     },
   },
