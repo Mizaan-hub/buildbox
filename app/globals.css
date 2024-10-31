@@ -56,7 +56,7 @@ body {
   }
 
   .text-14-normal {
-    @apply font-normal text-sm text-white-100/80;
+    @apply font-normal text-sm text-white-1/80;
   }
 
   .pink_container {
@@ -88,7 +88,7 @@ body {
   }
 
   .no-result {
-    @apply text-black-100 text-sm font-normal;
+    @apply text-black-1 text-sm font-normal;
   }
 
   /* profile */
@@ -132,11 +132,11 @@ body {
 
   /* searchform */
   .search-form {
-    @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+    @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5 text-black-1;
   }
 
   .search-input {
-    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
+    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-1 w-full h-auto outline-none;
   }
 
   .search-btn {
@@ -153,7 +153,7 @@ body {
   }
 
   .startup-card_desc {
-    @apply font-normal text-[16px] line-clamp-2 my-3 text-black-100 break-all;
+    @apply font-normal text-[16px] line-clamp-2 my-3 text-black-1 break-all;
   }
 
   .startup-card_img {
@@ -178,11 +178,11 @@ body {
   }
 
   .startup-form_input {
-    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300 !important;
+    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-3 !important;
   }
 
   .startup-form_textarea {
-    @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-3 placeholder:text-black-300 !important;
+    @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-3 placeholder:text-black-3 !important;
   }
 
   .startup-form_error {
@@ -190,7 +190,7 @@ body {
   }
 
   .startup-form_editor {
-    @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black-300 !important;
+    @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black-3 !important;
   }
 
   .startup-form_btn {
@@ -203,11 +203,11 @@ body {
   }
 
   .view-text {
-    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-lg capitalize;
+    @apply font-medium text-[16px] bg-primary-1 px-4 py-2 rounded-lg capitalize;
   }
 
   .category-tag {
-    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
+    @apply font-medium text-[16px] bg-primary-1 px-4 py-2 rounded-full;
   }
 
   .pattern {
