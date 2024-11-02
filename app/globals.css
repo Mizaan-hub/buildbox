@@ -34,6 +34,9 @@ body {
   .text-30-bold {
     @apply text-[30px] font-bold text-black;
   }
+  .text-30-bold-1 {
+    @apply text-[30px] font-bold text-white;
+  }
 
   .text-30-semibold {
     @apply font-semibold text-[30px] text-black;
@@ -50,9 +53,15 @@ body {
   .text-20-medium {
     @apply font-medium text-[20px] text-black;
   }
+  .text-20-medium-1 {
+    @apply font-medium text-[20px] text-white;
+  }
 
   .text-16-medium {
     @apply font-medium text-[16px] text-black;
+  }
+  .text-16-medium-1 {
+    @apply font-medium text-[16px] text-NavText;
   }
 
   .text-14-normal {
@@ -64,7 +73,7 @@ body {
   }
 
   .tag {
-    @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri;
+    @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri text-black;
   }
 
   .heading {
@@ -110,7 +119,7 @@ body {
 
   /* idea details */
   .divider {
-    @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
+    @apply border-dotted bg-primary max-w-4xl my-10 mx-auto;
   }
 
   .view_skeleton {
@@ -207,7 +216,10 @@ body {
   }
 
   .category-tag {
-    @apply font-medium text-[16px] bg-primary-1 px-4 py-2 rounded-full;
+    @apply font-medium text-[16px] bg-primary-1 px-4 py-2 rounded-full text-black;
+  }
+  .category-tag-1 {
+    @apply font-medium text-[16px] bg-primary-1 px-4 py-2 rounded-full text-black;
   }
 
   .pattern {
