@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scrollbar-width: none;
+}
+
 :root {
   --background: #0F1420;
   --foreground: #fff;
