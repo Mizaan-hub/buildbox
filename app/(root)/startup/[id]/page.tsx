@@ -22,7 +22,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   console.log("Start up id:", id);
   const [post, { select: editorPosts }] = await Promise.all([
     client.fetch(STARTUP_BY_ID_QUERY, { id }),
-    client.fetch(PLAYLIST_BY_SLUG_QUERY, { slug: "testing-phase" }),
+    client.fetch(PLAYLIST_BY_SLUG_QUERY, { slug: "testing-phase-1" }),
   ]);
 
   if (!post) return notFound();
