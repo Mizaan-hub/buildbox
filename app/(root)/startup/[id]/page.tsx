@@ -1,10 +1,13 @@
 import { formateDate } from "@/lib/utils";
 import { client } from "@/sanity/lib/client";
-import { PLAYLIST_BY_SLUG_QUERY, STARTUP_BY_ID_QUERY } from "@/sanity/lib/queries";
+import {
+  PLAYLIST_BY_SLUG_QUERY,
+  STARTUP_BY_ID_QUERY,
+} from "@/sanity/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import markdownIt from 'markdown-it'
+import markdownIt from "markdown-it";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/View";
@@ -12,16 +15,19 @@ import StartupCard, { StartupCardType } from "@/components/StartupCard";
 
 export const experimental_ppr = true;
 
-const md = markdownIt()
+const md = markdownIt();
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
   console.log("Start up id:", id);
-  const post = await client.fetch(STARTUP_BY_ID_QUERY, { id });
-  const { select: editorPosts}= await client.fetch(PLAYLIST_BY_SLUG_QUERY, { slug: 'testing-phase'})
+  const [post, { select: editorPosts }] = await Promise.all([
+    client.fetch(STARTUP_BY_ID_QUERY, { id }),
+    client.fetch(PLAYLIST_BY_SLUG_QUERY, { slug: "testing-phase" }),
+  ]);
+
   if (!post) return notFound();
 
-  const parsedContent = md.render(post?.pitch || '')
+  const parsedContent = md.render(post?.pitch || "");
 
   return (
     <>
@@ -60,11 +66,12 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
           <h3 className="text-30-bold-1">Pitch Details</h3>
           <hr className="divider" />
-          {parsedContent? (
+          {parsedContent ? (
             <article
-            className="prose prose-invert max-w-4xl font-work-sans break-all"
-              dangerouslySetInnerHTML={{__html: parsedContent}} />
-          ):(
+              className="prose prose-invert max-w-4xl font-work-sans break-all"
+              dangerouslySetInnerHTML={{ __html: parsedContent }}
+            />
+          ) : (
             <p className="no-result">No details Provided</p>
           )}
         </div>
