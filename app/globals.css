@@ -45,6 +45,9 @@ body {
   .text-30-semibold {
     @apply font-semibold text-[30px] text-black;
   }
+  .text-30-semibold-1 {
+    @apply font-semibold text-[30px] text-white;
+  }
 
   .text-26-semibold {
     @apply font-semibold text-[26px] text-black;
